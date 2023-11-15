@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un matériel{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouveau matériel</h1>
+
+    {{ include('material/_form.html.twig') }}
+
+    <a href="{{ path('app_material_index') }}">Retour en arrière</a>
+
+    
+{% endblock %}
