@@ -1,4 +1,4 @@
-FROM php:8.0-fpm AS inventaire
+FROM php:8.1-fpm AS inventaire
 
 RUN apt update \
     && apt install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip sudo \

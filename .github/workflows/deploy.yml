@@ -12,7 +12,6 @@ jobs:
       - uses: actions/checkout@v4
       - run: docker compose up -d 
       - run: docker compose exec php composer install
-      - run: docker compose exec php symfony console doctrine:database:create --env=test
       - run: docker compose exec php symfony console doctrine:schema:update --env=test --force
       - run: docker compose exec php php bin/phpunit
       - run: |
