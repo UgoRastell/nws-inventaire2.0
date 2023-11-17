@@ -60,9 +60,6 @@ class MaterialController extends AbstractController
         ]);
     }
 
-
-
-
     #[Route('/{id}/edit', name: 'app_material_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Material $material, MaterialRepository $materialRepository): Response
     {
