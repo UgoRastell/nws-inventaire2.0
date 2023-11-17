@@ -46,7 +46,7 @@ class MaterialControllerTest extends WebTestCase
 
         $this->client->submitForm('Sauvegarder', [
             'material[name]' => 'Testing',
-            'material[quantity]' => 16,
+            'material[quantity]' => "Testing",
         ]);
 
 
