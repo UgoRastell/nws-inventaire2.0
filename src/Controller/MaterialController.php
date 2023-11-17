@@ -91,7 +91,7 @@ class MaterialController extends AbstractController
         $reservations = $material->getReservations();
 
         if ($reservations->count() > 0) {
-            $this->addFlash('error', 'Ce materiel est actuellement utilisé');
+            $this->addFlash('error', 'Ce materiel est actuellement utilise');
         } else {
             if ($this->isCsrfTokenValid('delete' . $material->getId(), $request->request->get('_token'))) {
                 $materialRepository->remove($material, true);
