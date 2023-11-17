@@ -28,4 +28,4 @@ jobs:
         with:
           push: true
           tags: ghcr.io/ugorastell/inventaire:latest
-          target: nws-inventaire2.0
+          target: inventaire
