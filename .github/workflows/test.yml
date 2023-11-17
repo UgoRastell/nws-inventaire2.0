@@ -27,5 +27,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ghcr.io/ugorastell/inventaire:latest
+          tags: ghcr.io/UgoRastell/inventaire:latest
           target: inventaire
