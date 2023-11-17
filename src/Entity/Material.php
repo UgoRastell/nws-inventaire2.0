@@ -64,7 +64,6 @@ class Material
         return $this;
     }
 
-    // Permet de retourner le nom du material sous la forme d'un string
     public function __toString()
     {
         return  $this->getName();
@@ -97,7 +96,6 @@ class Material
     public function removeReservation(Reservation $reservation): self
     {
         if ($this->reservations->removeElement($reservation)) {
-            // set the owning side to null (unless already changed)
             if ($reservation->getMaterial() === $this) {
                 $reservation->setMaterial(null);
             }
