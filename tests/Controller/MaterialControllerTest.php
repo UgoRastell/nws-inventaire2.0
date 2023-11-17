@@ -14,9 +14,9 @@ class MaterialControllerTest extends WebTestCase
     private string $path = '/material/';
 
 
-  
 
-     protected function setUp(): void
+
+    protected function setUp(): void
     {
         $this->client = static::createClient();
         $this->repository = static::getContainer()->get('doctrine')->getRepository(Material::class);
@@ -32,10 +32,9 @@ class MaterialControllerTest extends WebTestCase
         $crawler = $this->client->request('GET', $this->path);
 
         self::assertResponseStatusCodeSame(200);
-
     }
 
-    
+
     public function testNew(): void
     {
         $originalNumObjectsInRepository = count($this->repository->findAll());
@@ -46,11 +45,11 @@ class MaterialControllerTest extends WebTestCase
 
         $this->client->submitForm('Sauvegarder', [
             'material[name]' => 'Testing',
-            'material[quantity]' => "Testing",
+            'material[quantity]' => 16,
         ]);
 
 
-       self::assertSame($originalNumObjectsInRepository + 1, count($this->repository->findAll()));
+        self::assertSame($originalNumObjectsInRepository + 1, count($this->repository->findAll()));
     }
 
 
@@ -72,7 +71,7 @@ class MaterialControllerTest extends WebTestCase
     // }
 
 
-    
+
     public function testEdit(): void
     {
         $fixture = new Material();
@@ -96,8 +95,8 @@ class MaterialControllerTest extends WebTestCase
         self::assertSame('TitleTest', $fixture[0]->getName());
         self::assertSame(878, $fixture[0]->getQuantity());
     }
-  
-    
+
+
 
 
     public function testRemove(): void
