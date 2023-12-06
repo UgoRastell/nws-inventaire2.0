@@ -24,5 +24,5 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - run: ssh ${{ secrets.SSH_USER}}@${{ secrets.SSH_HOST }} "cd nws-inventaire2.0 && git pull"
+      - run: ssh ${{ secrets.SSH_USER}}@${{ secrets.SSH_HOST }} "cd nws-inventaire2.0 && sudo git pull"
       - run: ssh ${{ secrets.SSH_USER}}@${{ secrets.SSH_HOST }} "cd nws-inventaire2.0 && sudo docker compose up -d --build --force-recreate"
