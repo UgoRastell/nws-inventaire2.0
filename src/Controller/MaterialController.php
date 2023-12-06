@@ -32,12 +32,12 @@ class MaterialController extends AbstractController
 
         $material = new Material();
         $form = $this->createForm(MaterialType::class, $material);
-        $form->handleRequest($request); // recupere la requete si lors de lenvoi du forms
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
 
-            $materialRepository->save($material, true); // envoie en bdd
+            $materialRepository->save($material, true); 
 
 
 
