@@ -25,7 +25,7 @@ class ReservationController extends AbstractController
         $reservations = $reservationRepository->findAll();
         $students = $callApiService->getData();
         $array = [];
-        // double forech pour compare le studient id de la revservation et de l'api
+       
         foreach ($students as $student) {
             foreach ($reservations as $reservation) {
                 if ($student['id'] == $reservation->getStudentId()) {

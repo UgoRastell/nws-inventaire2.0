@@ -23,7 +23,7 @@ class HomeController extends AbstractController
 
         $students = $callApiService->getData();
         $array = [];
-        // double forech pour compare le studient id de la revservation et de l'api
+       
         foreach ($students as $student) {
             foreach ($eleves as $reservation) {
                 if ($student['id'] == $reservation->getStudentId()) {
