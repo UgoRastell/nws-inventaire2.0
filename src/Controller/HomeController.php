@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
 
-
+    //test
     #[Route('/', name: 'app_home')]
     public function index(ReservationRepository $reservationRepository, CallApiService $callApiService): Response
     {
@@ -23,7 +23,7 @@ class HomeController extends AbstractController
 
         $students = $callApiService->getData();
         $array = [];
-        
+
         foreach ($students as $student) {
             foreach ($eleves as $reservation) {
                 if ($student['id'] == $reservation->getStudentId()) {
