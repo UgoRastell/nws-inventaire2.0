@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
 
-
+    //test
     #[Route('/', name: 'app_home')]
     public function index(ReservationRepository $reservationRepository, CallApiService $callApiService): Response
     {
@@ -45,11 +45,11 @@ class HomeController extends AbstractController
             'eleves' => $array
         ]);
     }
-  
 
 
 
-    
+
+
 
 
     #[Route('/emailRappel/{id}', name: 'app_emailrappel', methods: ["POST"])]
@@ -63,7 +63,7 @@ class HomeController extends AbstractController
         // $dateEmprunt = $reservation->getEmpruntDate()->format('d-m-Y H:i:s');
         // $dateRendu = $reservation->getRendered()->format('d-m-Y H:i:s');
         // $messageBody = "
-               
+
         // <h1>Mail de relance matériel</h1>
         // <p>
         // A la date a la quelle vous avez emprunté : $dateEmprunt  <br/>
@@ -80,5 +80,4 @@ class HomeController extends AbstractController
 
         // return $this->redirectToRoute('app_home', [],Response::HTTP_SEE_OTHER);
     }
-
 }
